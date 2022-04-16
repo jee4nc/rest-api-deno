@@ -1,4 +1,4 @@
-import type { Application } from "../../deps.ts";
+import type { Application } from "../deps.ts";
 import productRouter from "./product.ts";
 import clientRouter from "./client.ts";
 

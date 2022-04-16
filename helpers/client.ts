@@ -12,6 +12,12 @@ class ClientHelper {
       throw "ID not found";
     }
   }
+
+  // public static clientByIdInstanceator(data: ClientDB): Client {
+  //    const clientData = (await Service.getClientById(id)) as ClientDB;
+  //    const client: Client = Helper.clientInstanceator(clientData);
+  //    const response = { status: "success", client };
+  // }
 }
 
 export default ClientHelper;
