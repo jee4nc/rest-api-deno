@@ -4,7 +4,6 @@ import router from "./rest/routes/index.ts";
 const app = new Application();
 
 // Routes implementation
-
 router.init(app);
 
 app.listen({ port: 8080 });
