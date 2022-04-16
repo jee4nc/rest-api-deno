@@ -1,7 +1,7 @@
 import { Client, ClientDB } from "../types/client.ts";
 
 class ClientHelper {
-  public static clientInstanced(data: ClientDB): Client {
+  public static clientInstanceator(data: ClientDB): Client {
     try {
       const client: Client = {
         id: data[0],

@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 export function responseFormatter(
   ctx: any,
   body: any,
