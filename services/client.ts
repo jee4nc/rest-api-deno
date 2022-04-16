@@ -2,12 +2,16 @@ import pool from "../lib/dbConnection.ts";
 
 class ClientService {
   public static async getClientById(id: number): Promise<any> {
-    const db = await pool.connect();
-    const result = await db.queryArray(
-      `SELECT * FROM app_user WHERE id = ${id}`
-    );
-    console.log(result.rows[0]);
-    return result.rows[0];
+    try {
+      const db = await pool.connect();
+      const data = await db.queryArray(
+        `SELECT * FROM app_user WHERE id = ${id}`
+      );
+      db.release();
+      return data.rows[0];
+    } catch (_error) {
+      throw "Internal Server Error";
+    }
   }
 }
 
